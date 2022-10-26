@@ -21,11 +21,11 @@
 #
 # =============================================================================
 
-zepversion=zeppelin-0.7.3
+zepversion=zeppelin-0.10.0
 
 zeppack="${zepversion}-bin-all"
 zepfile="${zeppack}.tgz"
-zepsrc="http://apache.melbourneitmirror.net/zeppelin/${zepversion}/${zepfile}"
+zepsrc="https://dlcdn.apache.org/zeppelin/zeppelin-${zepversion}/${zepfile}"
 
 zeplocal="/usr/local/$zeppack"
 zepenv="/usr/local/zeppelin/conf/zeppelin-env.sh"
