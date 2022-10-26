@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-hadooppack=hadoop-2.9.0
-sparkpack=spark-2.2.0
-sparkhadooppack="${sparkpack}-bin-hadoop2.7"
+hadooppack=hadoop-3.2.1
+sparkpack=spark-3.1.1
+sparkhadooppack="${sparkpack}-bin-hadoop3.2"
 
 hadoopfile="${hadooppack}.tar.gz"
 hadoopchkfile="${hadoopfile}.mds"
-hadoopsrc="http://apache.melbourneitmirror.net/hadoop/common/${hadooppack}/${hadoopfile}"
-hadoopchksrc="https://dist.apache.org/repos/dist/release/hadoop/common/${hadooppack}/${hadoopchkfile}"
+hadoopsrc="https://archive.apache.org/dist/hadoop/common/${hadooppack}/${hadoopfile}"
+hadoopchksrc="https://archive.apache.org/dist/hadoop/common/${hadooppack}/${hadoopchkfile}"
 
 sparkfile="${sparkhadooppack}.tgz"
-sparkchkfile="${sparkfile}.sha"
-sparksrc="http://apache.melbourneitmirror.net/spark/${sparkpack}/${sparkfile}"
-sparkchksrc="https://archive.apache.org/dist/spark/${sparkpack}/${sparkchkfile}"
+sparkchkfile="${sparkfile}.sha512"
+sparksrc="https://archive.apache.org/dist/spark/spark-${sparkpack}/${sparkfile}"
+sparkchksrc="https://archive.apache.org/dist/spark-${sparkpack}/${sparkchkfile}"
 
 if [ -e "$hadoopfile" ]; then
 	echo "$hadoopfile already exists. Skip downloading"
