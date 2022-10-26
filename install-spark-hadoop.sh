@@ -11,8 +11,8 @@ hadoopchksrc="https://archive.apache.org/dist/hadoop/common/${hadooppack}/${hado
 
 sparkfile="${sparkhadooppack}.tgz"
 sparkchkfile="${sparkfile}.sha512"
-sparksrc="https://archive.apache.org/dist/spark/spark-${sparkpack}/${sparkfile}"
-sparkchksrc="https://archive.apache.org/dist/spark-${sparkpack}/${sparkchkfile}"
+sparksrc="https://archive.apache.org/dist/spark/${sparkpack}/${sparkfile}"
+sparkchksrc="https://archive.apache.org/dist/${sparkpack}/${sparkchkfile}"
 
 if [ -e "$hadoopfile" ]; then
 	echo "$hadoopfile already exists. Skip downloading"
