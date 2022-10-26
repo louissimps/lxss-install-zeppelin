@@ -32,8 +32,8 @@ sudo sed -i '/PermitRootLogin/c\PermitRootLogin no' "$sshdconf"
 echo "Setting [AllowUsers $runninguser] in $sshdconf"
 sudo sed -i "/PermitRootLogin no/a AllowUsers $runninguser" "$sshdconf"
 
-echo "Setting [PasswordAuthentication yes] in $sshdconf"
-sudo sed -i '/PasswordAuthentication/c\PasswordAuthentication yes' "$sshdconf"
+echo "Setting [PasswordAuthentication no] in $sshdconf"
+sudo sed -i '/PasswordAuthentication/c\PasswordAuthentication no' "$sshdconf"
 
 sudo service ssh --full-restart
 sudo systemctl enable ssh
