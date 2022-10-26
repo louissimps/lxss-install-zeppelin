@@ -25,7 +25,7 @@ zepversion=zeppelin-0.10.0
 
 zeppack="${zepversion}-bin-all"
 zepfile="${zeppack}.tgz"
-zepsrc="https://dlcdn.apache.org/zeppelin/zeppelin-${zepversion}/${zepfile}"
+zepsrc="https://dlcdn.apache.org/zeppelin/${zepversion}/${zepfile}"
 
 zeplocal="/usr/local/$zeppack"
 zepenv="/usr/local/zeppelin/conf/zeppelin-env.sh"
